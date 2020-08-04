@@ -10,7 +10,7 @@ function VideoItem({ video, onVideoSelect }) {
         alt={video.snippet.title}
       />
       <div className="content">
-        <div className="header">{video.snippet.title}</div>
+        <p className="header">{video.snippet.title}</p>
       </div>
     </div>
   );

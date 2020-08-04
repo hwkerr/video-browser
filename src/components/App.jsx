@@ -1,4 +1,5 @@
 import React from "react";
+import { XmlEntities as Entities } from "html-entities"
 import SearchBar from "./SearchBar";
 import VideoDetail from "./VideoDetail";
 import VideoList from "./VideoList";
@@ -17,9 +18,14 @@ class App extends React.Component {
         q: term
       }
     });
+    const entities = new Entities();
+    const items = response.data.items.map(item => {
+      item.snippet.title = entities.decode(item.snippet.title);
+      return item;
+    });
     this.setState({
-      videos: response.data.items,
-      selectedVideo: response.data.items[0]
+      videos: items,
+      selectedVideo: items[0]
     });
   };
 
