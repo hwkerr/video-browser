@@ -1,3 +1,9 @@
+# Video Browser React App
+
+Enter a search query to get a list of YouTube videos. Select any to watch in an embedded player.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
